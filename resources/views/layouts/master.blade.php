@@ -37,7 +37,7 @@
         </div>
         <div class="sidebar-wrapper" id="sidebar-wrapper">
             <ul class="nav">
-                <li>
+                <li class ="{{'dashboard' ==request()->path() ? 'active': ''}}">
                     <a href="/dashboard">
                         <i class="now-ui-icons design_app"></i>
                         <p>Dashboard</p>
@@ -61,13 +61,13 @@
                         <p>Notifications</p>
                     </a>
                 </li>
-                <li>
+                <li class ="{{'role-register' ==request()->path() ? 'active': ''}}" >
                     <a href="/role-register">
                         <i class="now-ui-icons users_single-02"></i>
                         <p>User Profile</p>
                     </a>
                 </li>
-                <li class="active ">
+                <li class=" ">
                     <a href="./tables.html">
                         <i class="now-ui-icons design_bullet-list-67"></i>
                         <p>Table List</p>

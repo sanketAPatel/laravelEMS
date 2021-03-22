@@ -60,10 +60,14 @@
                                     {{$row->usertype}}
                                 </td>
                                 <td class="text-right">
-                                    <a href="/role-edit/{{$row->id}}" class="btn-btn-success btn-success">EDIT</a>
+                                    <a href="/role-edit/{{$row->id}}" class="btn btn-success">EDIT</a>
                                 </td>
                                 <td class="text-right">
-                                    <a href="#" class="btn-btn-danger btn-danger">DELETE</a>
+                                    <form action="/role-delete/{{$row->id}}" method="post">
+                                       {{csrf_field()}}
+                                        {{method_field('DELETE')}}
+                                    <button type="submit"  class="btn btn-danger">DELETE</button>
+                                    </form>
                                 </td>
                             </tr>
 

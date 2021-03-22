@@ -42,7 +42,7 @@
                             </select>
 
                         </div>
-                        <button type="submit" class="btn btn-success">Update</button>
+                                                 <button type="submit" class="btn btn-success">Update</button>
                         <a href="/role-register"> <button type="button" class="btn btn-danger">Cancel</button></a>
                     </form>
                 </div>

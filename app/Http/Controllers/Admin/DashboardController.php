@@ -25,8 +25,14 @@ class DashboardController extends Controller
         $users->name=$request->input('uname');
         $users->usertype= $request->input('utype');
         $users-> update();
-           return redirect('/role-register')->with('status','done!');
+           return redirect('/role-register')->with('status','Role updated!');
     }
+    public function registerdelete($id)
+    {
+            $users=User::findOrFail($id);
+            $users->delete();
+            return redirect('/role-register')->with('status','Role Deleted');
 
+    }
 
 }
