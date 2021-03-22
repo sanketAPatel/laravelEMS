@@ -15,7 +15,18 @@ class DashboardController extends Controller
     }
 
     public function registeredit(Request $request ,$id){
-        $id = User::findOrFail($id);
-            return view('admin.register-edit');
+        $users = User::findOrFail($id);
+            return view('admin.register-edit')->with('users',$users);
     }
+
+    public function registerupdate(Request $request ,$id)
+    {
+        $users= User::find($id);
+        $users->name=$request->input('uname');
+        $users->usertype= $request->input('utype');
+        $users-> update();
+           return redirect('/role-register')->with('status','done!');
+    }
+
+
 }
