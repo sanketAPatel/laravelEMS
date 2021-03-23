@@ -31,6 +31,8 @@ Route::get('/role-register','App\Http\Controllers\Admin\DashboardController@regi
 Route::get('/role-edit/{id}','App\Http\Controllers\Admin\DashboardController@registeredit');
 Route::put('/role-register-update/{id}','App\Http\Controllers\Admin\DashboardController@registerupdate');
 Route::delete('/role-delete/{id}','App\Http\Controllers\Admin\DashboardController@registerdelete');
+
+Route::get('/project','App\Http\Controllers\Admin\projectController@index');
 });
 
 Auth::routes();

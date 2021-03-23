@@ -2,7 +2,7 @@
 
 @section('title')
 
-EMS-dashboard panel
+    EMS-projects page
 @endsection
 
 @section('content')
@@ -11,24 +11,28 @@ EMS-dashboard panel
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title"> Simple Table</h4>
+                    <h4 class="card-title"> Project Table</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
                             <thead class=" text-primary">
                             <th>
-                                Name
+                                Id
                             </th>
                             <th>
-                                Country
+                                Title
                             </th>
                             <th>
-                                City
+                                Descriptions
                             </th>
-                            <th class="text-right">
-                                Salary
+                            <th>
+                                Edit
                             </th>
+                            <th>
+                                Delete
+                            </th>
+
                             </thead>
                             <tbody>
                             <tr>
@@ -36,17 +40,18 @@ EMS-dashboard panel
                                     sanket
                                 </td>
                                 <td>
-                                    patel
+                                    p
                                 </td>
                                 <td>
-                                    toronto
+                                    Oud-Turnhout
                                 </td>
-                                <td class="text-right">
-                                    $76,738
+                                <td>
+                                <a href="#"> <button type="button" class="btn btn-success">Cancel</button></a>
+                                </td>
+                                <td>
+                                <a href="#"> <button type="button" class="btn btn-danger">Cancel</button></a>
                                 </td>
                             </tr>
-
-
 
                             </tbody>
                         </table>
