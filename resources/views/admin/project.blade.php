@@ -46,7 +46,8 @@
 
 
     <div class="row">
-    </div>@if (session('status'))
+    </div>
+    @if (session('status'))
         <div class="alert alert-success">
             {{ session('status') }}
         </div>
@@ -97,7 +98,7 @@
                     </td>
 
                     <td>
-                        <a href="#"> <button type="button" class="btn btn-success">Edit</button></a>
+                        <a href="{{url('project/'.$data->id)}}"> <button type="button" class="btn btn-success">Edit</button></a>
                     </td>
                     <td>
                         <a href="#"> <button type="button" class="btn btn-danger">Cancel</button></a>
