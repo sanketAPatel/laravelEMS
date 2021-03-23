@@ -33,6 +33,7 @@ Route::put('/role-register-update/{id}','App\Http\Controllers\Admin\DashboardCon
 Route::delete('/role-delete/{id}','App\Http\Controllers\Admin\DashboardController@registerdelete');
 
 Route::get('/project','App\Http\Controllers\Admin\projectController@index');
+Route::post('/save-project','App\Http\Controllers\Admin\projectController@store');
 });
 
 Auth::routes();
