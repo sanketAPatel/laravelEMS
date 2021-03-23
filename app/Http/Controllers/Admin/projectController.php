@@ -1,16 +1,18 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
-use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 
 class projectController extends Controller
 {
  public  function index()
  {
-     return view('admin.project');
+     $projects =Project::all();
+      return view('admin.project',compact('projects'));
+
  }
  public function store(Request $request)
  {

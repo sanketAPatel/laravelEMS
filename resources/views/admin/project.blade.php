@@ -81,23 +81,30 @@
 
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    sanket
-                                </td>
-                                <td>
-                                    p
-                                </td>
-                                <td>
-                                    Oud-Turnhout
-                                </td>
-                                <td>
-                                <a href="#"> <button type="button" class="btn btn-success">Edit</button></a>
-                                </td>
-                                <td>
-                                <a href="#"> <button type="button" class="btn btn-danger">Cancel</button></a>
-                                </td>
-                            </tr>
+
+
+        @foreach($projects as $data)
+
+                <tr>
+                    <td>
+                        {{$data->id}}
+                    </td>
+                    <td>
+                        {{$data->title}}
+                    </td>
+                    <td>
+                        {{$data->description}}
+                    </td>
+
+                    <td>
+                        <a href="#"> <button type="button" class="btn btn-success">Edit</button></a>
+                    </td>
+                    <td>
+                        <a href="#"> <button type="button" class="btn btn-danger">Cancel</button></a>
+                    </td>
+                </tr>
+
+                @endforeach
 
                             </tbody>
                         </table>
