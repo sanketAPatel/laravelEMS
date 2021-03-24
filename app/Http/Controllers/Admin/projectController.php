@@ -23,7 +23,7 @@ class projectController extends Controller
      $project->description=$request->input('description');
 
      $project->save();
-     return view('admin.project')->with('status',"Project Added");
+     return redirect('/project')->with('status',"Project Added");
  }
  public function editProject($id){
    //return
@@ -40,6 +40,13 @@ class projectController extends Controller
      $project-> update();
      return redirect('/project')->with('status','Project details updated!');
 
+
+ }
+ public function projectDelete($id){
+
+     $project= Project::findorFail($id);
+     $project->delete();
+     return redirect('/project')->with('status','project deleted');
 
  }
 }

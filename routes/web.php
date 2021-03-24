@@ -36,6 +36,7 @@ Route::get('/project','App\Http\Controllers\Admin\projectController@index');
 Route::post('/save-project','App\Http\Controllers\Admin\projectController@store');
 Route::get('/project/{id}','App\Http\Controllers\Admin\projectController@editProject');
 Route::put('projectUpdate/{id}','App\Http\Controllers\Admin\projectController@UpdateProject');
+Route::delete('projectDelete/{id}','App\Http\Controllers\Admin\projectController@projectDelete');
 });
 
 Auth::routes();

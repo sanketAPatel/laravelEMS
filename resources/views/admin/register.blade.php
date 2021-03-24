@@ -70,7 +70,6 @@
                                     </form>
                                 </td>
                             </tr>
-
                             @endforeach
 
                             </tbody>

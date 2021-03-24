@@ -100,9 +100,18 @@
                     <td>
                         <a href="{{url('project/'.$data->id)}}"> <button type="button" class="btn btn-success">Edit</button></a>
                     </td>
+
+                    <!-- Delete button  code is here -->
                     <td>
-                        <a href="#"> <button type="button" class="btn btn-danger">Cancel</button></a>
+                    <form action="{{url('projectDelete/'.$data->id)}}" method ="post">
+                        {{csrf_field()}}
+                        {{Method_field('DELETE')}}
+
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <!-- Delete button  code is here -->
+                    </form>
                     </td>
+
                 </tr>
 
                 @endforeach
