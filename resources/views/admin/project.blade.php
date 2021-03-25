@@ -52,6 +52,7 @@
             {{ session('status') }}
         </div>
     @endif
+
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
@@ -59,10 +60,13 @@
              <button type="button" class="btn btn-primary float-right"  data-toggle="modal" data-target="#exampleModal" >Add Project </button>
                     </h4>
 
+                    <!-- extra code ends  -->
+
+                    <!-- extral code ends  -->
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table id="example" class="table table-striped table-bordered" style="width:100%">
                             <thead class=" text-primary">
                             <th>
                                 Id
@@ -82,10 +86,7 @@
 
                             </thead>
                             <tbody>
-
-
         @foreach($projects as $data)
-
                 <tr>
                     <td>
                         {{$data->id}}
@@ -113,7 +114,6 @@
                     </td>
 
                 </tr>
-
                 @endforeach
 
                             </tbody>
@@ -125,17 +125,26 @@
 
     </div>
 
-
 @endsection
 
-
 @section('scripts')
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
 
-    <script>
-        $('#datepicker').datepicker({
-            uiLibrary: 'bootstrap4'
-        });
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+
     </script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+    <!--  start of  Added for pagination and search  -->
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+    <!--  start of  Added for pagination and search  -->
 @endsection

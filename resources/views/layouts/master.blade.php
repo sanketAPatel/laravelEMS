@@ -19,10 +19,14 @@
     <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
-    <!-- start of link for date picker -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    <!-- end of links for date picker  -->
+
+
+    <!-- I added this css link for  the search and pagination  -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+     <!-- end of the link for search and pagination  -->
 
 </head>
 
@@ -119,9 +123,9 @@
                     <span class="navbar-toggler-bar navbar-kebab"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                    <form>
+                    <form >
                         <div class="input-group no-border">
-                            <input type="text" value="" class="form-control" placeholder="Search...">
+                            <input  type="text" value="" class="form-control" placeholder="Search...">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <i class="now-ui-icons ui-1_zoom-bold"></i>
@@ -218,6 +222,7 @@
 <script src="../assets/js/core/popper.min.js"></script>
 <script src="../assets/js/core/bootstrap.min.js"></script>
 <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
 <!--  Google Maps Plugin    -->
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Chart JS -->
@@ -228,10 +233,17 @@
 <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/demo/demo.js"></script>
 
-<!--  start of Added for date picker   -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-<!-- end of  Added for Date picker  -->
+
+
+<!--  start of  Added for pagination and search  -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+
+<!--  end of Added for pagination and search picker   -->
 
 
 @yield('scripts')
