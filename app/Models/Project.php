@@ -9,7 +9,8 @@ use Illuminate\Notifications\Notifiable;
 class Project extends Model
 {
     use HasFactory, Notifiable;
-    protected $table='projects';
+
+    protected $table = 'projects';
 
 
     protected $fillable = [

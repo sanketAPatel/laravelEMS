@@ -7,7 +7,8 @@
 
 @section('content')
     <!-- Modal code is here -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -19,23 +20,23 @@
                 </div>
 
                 <!--  start of form inside the  modal  -->
-             <form action="/save-project" method="post">
-                 {{csrf_field()}}
-                <div class="modal-body">
+                <form action="/save-project" method="post">
+                    {{csrf_field()}}
+                    <div class="modal-body">
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Title:</label>
-                            <input type="text"  name= "title"    class="form-control" id="recipient-name">
+                            <input type="text" name="title" class="form-control" id="recipient-name">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Description:</label>
-                            <textarea  name="description"  class="form-control"   id="message-text"></textarea>
+                            <textarea name="description" class="form-control" id="message-text"></textarea>
                         </div>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-success">Add Project</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Add Project</button>
+                    </div>
                 </form>
                 <!--  end of form inside the  modal  -->
             </div>
@@ -53,16 +54,18 @@
         </div>
     @endif
 
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title"> Project Table
-             <button type="button" class="btn btn-primary float-right"  data-toggle="modal" data-target="#exampleModal" >Add Project </button>
-                    </h4>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title"> Project Table
+                    <button type="button" class="btn btn-primary float-right" data-toggle="modal"
+                            data-target="#exampleModal">Add Project
+                    </button>
+                </h4>
 
-                    <!-- extra code ends  -->
+                <!-- extra code ends  -->
 
-                    <!-- extral code ends  -->
+                <!-- extral code ends  -->
 
                 <div class="card-body">
                     <div class="table-responsive">
@@ -86,35 +89,37 @@
 
                             </thead>
                             <tbody>
-        @foreach($projects as $data)
-                <tr>
-                    <td>
-                        {{$data->id}}
-                    </td>
-                    <td>
-                        {{$data->title}}
-                    </td>
-                    <td>
-                        {{$data->description}}
-                    </td>
+                            @foreach($projects as $data)
+                                <tr>
+                                    <td>
+                                        {{$data->id}}
+                                    </td>
+                                    <td>
+                                        {{$data->title}}
+                                    </td>
+                                    <td>
+                                        {{$data->description}}
+                                    </td>
 
-                    <td>
-                        <a href="{{url('project/'.$data->id)}}"> <button type="button" class="btn btn-success">Edit</button></a>
-                    </td>
+                                    <td>
+                                        <a href="{{url('project/'.$data->id)}}">
+                                            <button type="button" class="btn btn-success">Edit</button>
+                                        </a>
+                                    </td>
 
-                    <!-- Delete button  code is here -->
-                    <td>
-                    <form action="{{url('projectDelete/'.$data->id)}}" method ="post">
-                        {{csrf_field()}}
-                        {{Method_field('DELETE')}}
+                                    <!-- Delete button  code is here -->
+                                    <td>
+                                        <form action="{{url('projectDelete/'.$data->id)}}" method="post">
+                                            {{csrf_field()}}
+                                            {{Method_field('DELETE')}}
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                        <!-- Delete button  code is here -->
-                    </form>
-                    </td>
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                            <!-- Delete button  code is here -->
+                                        </form>
+                                    </td>
 
-                </tr>
-                @endforeach
+                                </tr>
+                            @endforeach
 
                             </tbody>
                         </table>
@@ -142,9 +147,9 @@
 
     <!--  start of  Added for pagination and search  -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#example').DataTable();
-        } );
+        });
     </script>
     <!--  start of  Added for pagination and search  -->
 @endsection

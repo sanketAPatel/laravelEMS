@@ -2,7 +2,7 @@
 
 @section('title')
 
-EMS-dashboard panel
+    EMS-dashboard panel
 @endsection
 
 @section('content')
@@ -45,7 +45,6 @@ EMS-dashboard panel
                                     $76,738
                                 </td>
                             </tr>
-
 
 
                             </tbody>

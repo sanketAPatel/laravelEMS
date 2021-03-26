@@ -43,33 +43,33 @@
                             <tbody>
 
                             @foreach($users as $row)
-                            <tr>
-                                <td>
-                                    {{$row->id}}
-                                </td>
-                                <td>
-                                    {{$row->name}}
-                                </td>
-                                <td>
-                                    {{$row->phone}}
-                                </td>
-                                <td>
-                                    {{$row->email}}
-                                </td>
-                                <td>
-                                    {{$row->usertype}}
-                                </td>
-                                <td class="text-right">
-                                    <a href="/role-edit/{{$row->id}}" class="btn btn-success">EDIT</a>
-                                </td>
-                                <td class="text-right">
-                                    <form action="/role-delete/{{$row->id}}" method="post">
-                                       {{csrf_field()}}
-                                        {{method_field('DELETE')}}
-                                    <button type="submit"  class="btn btn-danger">DELETE</button>
-                                    </form>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>
+                                        {{$row->id}}
+                                    </td>
+                                    <td>
+                                        {{$row->name}}
+                                    </td>
+                                    <td>
+                                        {{$row->phone}}
+                                    </td>
+                                    <td>
+                                        {{$row->email}}
+                                    </td>
+                                    <td>
+                                        {{$row->usertype}}
+                                    </td>
+                                    <td class="text-right">
+                                        <a href="/role-edit/{{$row->id}}" class="btn btn-success">EDIT</a>
+                                    </td>
+                                    <td class="text-right">
+                                        <form action="/role-delete/{{$row->id}}" method="post">
+                                            {{csrf_field()}}
+                                            {{method_field('DELETE')}}
+                                            <button type="submit" class="btn btn-danger">DELETE</button>
+                                        </form>
+                                    </td>
+                                </tr>
                             @endforeach
 
                             </tbody>
@@ -100,9 +100,9 @@
 
     <!--  start of  Added for pagination and search  -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#example').DataTable();
-        } );
+        });
     </script>
     <!--  start of  Added for pagination and search  -->
 

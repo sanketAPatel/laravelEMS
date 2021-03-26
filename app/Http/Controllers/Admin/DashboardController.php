@@ -10,29 +10,31 @@ class DashboardController extends Controller
 {
     public function register()
     {
-            $users=User::all();
+        $users = User::all();
 
-        return view('admin.register')->with('users',$users);
+        return view('admin.register')->with('users', $users);
     }
 
-    public function registeredit(Request $request ,$id){
-        $users = User::findOrFail($id);
-            return view('admin.register-edit')->with('users',$users);
-    }
-
-    public function registerupdate(Request $request ,$id)
+    public function registeredit(Request $request, $id)
     {
-        $users= User::find($id);
-        $users->name=$request->input('uname');
-        $users->usertype= $request->input('utype');
-        $users-> update();
-           return redirect('/role-register')->with('status','Role updated!');
+        $users = User::findOrFail($id);
+        return view('admin.register-edit')->with('users', $users);
     }
+
+    public function registerupdate(Request $request, $id)
+    {
+        $users = User::find($id);
+        $users->name = $request->input('uname');
+        $users->usertype = $request->input('utype');
+        $users->update();
+        return redirect('/role-register')->with('status', 'Role updated!');
+    }
+
     public function registerdelete($id)
     {
-            $users=User::findOrFail($id);
-            $users->delete();
-            return redirect('/role-register')->with('status','Role Deleted');
+        $users = User::findOrFail($id);
+        $users->delete();
+        return redirect('/role-register')->with('status', 'Role Deleted');
 
     }
 
