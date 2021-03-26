@@ -67,7 +67,7 @@
                         <p>User Profile</p>
                     </a>
                 </li>
-              
+
                 <li class="active-pro">
                     <a href="./upgrade.html">
                         <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -114,7 +114,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons media-2_sound-wave"></i>
+                                <i class="now-ui-icons media-2_sound-wave"> </i>
                                 <p>
                                     <span class="d-lg-none d-md-block">Stats</span>
                                 </p>
@@ -140,7 +140,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons users_single-02"></i>
+                                <i class="now-ui-icons users_single-02">
+
+                                </i>
                                 <p>
                                     <span class="d-lg-none d-md-block">Account</span>
                                 </p>

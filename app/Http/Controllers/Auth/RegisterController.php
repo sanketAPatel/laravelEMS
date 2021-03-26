@@ -64,11 +64,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //1. Receive the file from form
+
+        //2. Upload the file
+
+        $user_avatar = $data['avatar']->storeAs('avatars', str_replace(" ","", $data['name']).'.'.$data['avatar']->getClientOriginalExtension());
+
         return User::create([
             'name' => $data['name'],
             'phone' => $data['phone'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            //3. Save the file name in DB
+
+            'avatar' => $user_avatar
         ]);
     }
 }
